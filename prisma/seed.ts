@@ -38,6 +38,7 @@ async function main() {
         "expenseByCategory.json",
     ];
 
+    // Delete all the data beforehand if it exists
     await deleteAllData(orderedFileNames);
 
     for (const fileName of orderedFileNames) {
