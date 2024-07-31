@@ -15,8 +15,11 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-/* --------------------------------- ROUTES --------------------------------- */
+/* ----------------------------- ROUTES IMPORTS ----------------------------- */
+import dashboardRoutes from "./routes/dashboardRoutes";
 
+/* --------------------------------- ROUTES --------------------------------- */
+app.use("/dashboard", dashboardRoutes)
 
 /* --------------------------------- SERVER --------------------------------- */
 const port = process.env.PORT || 3001;
